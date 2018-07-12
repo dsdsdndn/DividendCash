@@ -1,0 +1,26 @@
+[Unit]
+Description=Dividend's distributed currency daemon
+After=network.target
+
+[Service]
+User=dividend
+Group=dividend
+
+Type=forking
+PIDFile=/var/lib/dividendd/dividendd.pid
+
+ExecStart=/usr/bin/dividendd -daemon -pid=/var/lib/dividendd/dividendd.pid \
+          -conf=/etc/dividend/dividend.conf -datadir=/var/lib/dividendd
+
+ExecStop=-/usr/bin/dividend-cli -conf=/etc/dividend/dividend.conf \
+         -datadir=/var/lib/dividendd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

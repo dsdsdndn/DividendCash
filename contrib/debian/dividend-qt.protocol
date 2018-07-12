@@ -1,0 +1,11 @@
+[Protocol]
+exec=dividend-qt '%u'
+protocol=dividend
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

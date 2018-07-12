@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dividend
+Comment=Dividend P2P Cryptocurrency
+Comment[fr]=Dividend, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Dividend, eşten eşe kriptografik sanal para birimi
+Exec=dividend-qt %u
+Terminal=false
+Type=Application
+Icon=dividend128
+MimeType=x-scheme-handler/dividend;
+Categories=Office;Finance;
